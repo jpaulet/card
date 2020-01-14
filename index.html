@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stripe Credit Card Customization</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inconsolata'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class='container-main'>
+    <h1> PERSONALIZED CARDS <br />in a easy way!</h1>
+    <p style='font-weight:300;'> This app let you create cards in a <bold>minute</bold> with Stripe Issuing*. Allows, for example, to create cards with your name, company logo, custom nice backgrounds and more! <br /><br />Just <bold style='font-weight:600;'>5$</bold> each!!! </p>
+  </div>
+
+<div class="checkout">
+  <div class="credit-card-box">
+    <div class="flip">
+      <div class="front">
+        <div class="chip">
+        </div>
+        <div class="contactless">
+          <img src='./img/contactless.png' style='width:20px;margin-top:7px; opacity:0.5;' />
+        </div>
+        <div class="logo">
+          <svg version="1.1" id="visa" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="47.834px" height="47.834px" viewBox="0 0 47.834 47.834" style="enable-background:new 0 0 47.834 47.834;">
+            <g>
+              <g>
+                <path d="M44.688,16.814h-3.004c-0.933,0-1.627,0.254-2.037,1.184l-5.773,13.074h4.083c0,0,0.666-1.758,0.817-2.143
+                         c0.447,0,4.414,0.006,4.979,0.006c0.116,0.498,0.474,2.137,0.474,2.137h3.607L44.688,16.814z M39.893,26.01
+                         c0.32-0.819,1.549-3.987,1.549-3.987c-0.021,0.039,0.317-0.825,0.518-1.362l0.262,1.23c0,0,0.745,3.406,0.901,4.119H39.893z
+                         M34.146,26.404c-0.028,2.963-2.684,4.875-6.771,4.875c-1.743-0.018-3.422-0.361-4.332-0.76l0.547-3.193l0.501,0.228
+                         c1.277,0.532,2.104,0.747,3.661,0.747c1.117,0,2.313-0.438,2.325-1.393c0.007-0.625-0.501-1.07-2.016-1.77
+                         c-1.476-0.683-3.43-1.827-3.405-3.876c0.021-2.773,2.729-4.708,6.571-4.708c1.506,0,2.713,0.31,3.483,0.599l-0.526,3.092
+                         l-0.351-0.165c-0.716-0.288-1.638-0.566-2.91-0.546c-1.522,0-2.228,0.634-2.228,1.227c-0.008,0.668,0.824,1.108,2.184,1.77
+                         C33.126,23.546,34.163,24.783,34.146,26.404z M0,16.962l0.05-0.286h6.028c0.813,0.031,1.468,0.29,1.694,1.159l1.311,6.304
+                         C7.795,20.842,4.691,18.099,0,16.962z M17.581,16.812l-6.123,14.239l-4.114,0.007L3.862,19.161
+                         c2.503,1.602,4.635,4.144,5.386,5.914l0.406,1.469l3.808-9.729L17.581,16.812L17.581,16.812z M19.153,16.8h3.89L20.61,31.066
+                         h-3.888L19.153,16.8z"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="number">0000 0000 0000 0000</div>
+        <div class="card-expiration-date">
+          <label>GOOD<br />THRU</label>
+          <div style='position:absolute;top:-3px;left:30px;'></div>
+        </div>
+        <div class="card-holder" style='margin-top:20px;'>
+          <div></div>
+        </div>
+      </div>
+      <div class="back">
+        <div class="strip"></div>
+        <div class="logo">
+          <svg version="1.1" id="visa" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="47.834px" height="47.834px" viewBox="0 0 47.834 47.834" style="enable-background:new 0 0 47.834 47.834;">
+            <g>
+              <g>
+                <path d="M44.688,16.814h-3.004c-0.933,0-1.627,0.254-2.037,1.184l-5.773,13.074h4.083c0,0,0.666-1.758,0.817-2.143
+                         c0.447,0,4.414,0.006,4.979,0.006c0.116,0.498,0.474,2.137,0.474,2.137h3.607L44.688,16.814z M39.893,26.01
+                         c0.32-0.819,1.549-3.987,1.549-3.987c-0.021,0.039,0.317-0.825,0.518-1.362l0.262,1.23c0,0,0.745,3.406,0.901,4.119H39.893z
+                         M34.146,26.404c-0.028,2.963-2.684,4.875-6.771,4.875c-1.743-0.018-3.422-0.361-4.332-0.76l0.547-3.193l0.501,0.228
+                         c1.277,0.532,2.104,0.747,3.661,0.747c1.117,0,2.313-0.438,2.325-1.393c0.007-0.625-0.501-1.07-2.016-1.77
+                         c-1.476-0.683-3.43-1.827-3.405-3.876c0.021-2.773,2.729-4.708,6.571-4.708c1.506,0,2.713,0.31,3.483,0.599l-0.526,3.092
+                         l-0.351-0.165c-0.716-0.288-1.638-0.566-2.91-0.546c-1.522,0-2.228,0.634-2.228,1.227c-0.008,0.668,0.824,1.108,2.184,1.77
+                         C33.126,23.546,34.163,24.783,34.146,26.404z M0,16.962l0.05-0.286h6.028c0.813,0.031,1.468,0.29,1.694,1.159l1.311,6.304
+                         C7.795,20.842,4.691,18.099,0,16.962z M17.581,16.812l-6.123,14.239l-4.114,0.007L3.862,19.161
+                         c2.503,1.602,4.635,4.144,5.386,5.914l0.406,1.469l3.808-9.729L17.581,16.812L17.581,16.812z M19.153,16.8h3.89L20.61,31.066
+                         h-3.888L19.153,16.8z"/>
+              </g>
+            </g>
+          </svg>
+
+        </div>
+        <div class="ccv">
+          <label>CCV</label>
+          <div>999</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="form" autocomplete="off" action="/charge.php" method="post" id="payment-form">
+    <fieldset style='display:none;'>
+      <label for="card-number">Card Number</label>
+      <input type="num" id="card-number" class="input-cart-number" maxlength="4" />
+      <input type="num" id="card-number-1" class="input-cart-number" maxlength="4" />
+      <input type="num" id="card-number-2" class="input-cart-number" maxlength="4" />
+      <input type="num" id="card-number-3" class="input-cart-number" maxlength="4" />
+    </fieldset>
+    <fieldset>
+      <label for="card-holder">Card holder</label>
+      <input type="text" id="card-holder" name='card-holder' />
+    </fieldset>
+    <fieldset class="fieldset-expiration">
+      <label for="card-expiration-month">Expiration date</label>
+      <div class="select">
+        <select id="card-expiration-month" name='expiration-month'>
+          <option></option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </div>
+      <div class="select">
+        <select id="card-expiration-year" name='expiration-year'>
+          <option></option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+          <option>2026</option>
+          <option>2027</option>
+          
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-ccv" style='display:none;'>
+      <label for="card-ccv">CCV</label>
+      <input type="text" id="card-ccv" maxlength="3" />
+    </fieldset>
+
+    <fieldset class="fieldset-brand">
+      <label for="card-brand">Brand</label>
+      <label class='card-brand' style='float:left;margin-left:20px;'>
+        <input type="radio" name="card-brand" value="visa1" checked class='card-brand-input' />
+        <img src="./img/visa_colour.png" style='width:80px;'>
+      </label>
+
+      <label class='card-brand' style='float:left;margin-left:20px;'>
+        <input type="radio" name="card-brand" value="visa2" checked class='card-brand-input' />
+        <img src="./img/visa_black.png" style='width:80px;'>
+      </label>
+
+      <label class='card-brand' style='float:left;margin-left:20px;background-color:#000;'>
+        <input type="radio" name="card-brand" value="visa3" checked class='card-brand-input' />
+        <img src="./img/visa_white.png" style='width:80px;'>
+      </label>
+
+      <br />      
+      
+      <label class='card-brand' style='clear:both;float:left;margin-left:20px;margin-top:10px;'>
+        <input type="radio" name="card-brand" value="mastercard1" class='card-brand-input' />
+        <img src="./img/mastercard_black.png" style='width:60px;'>
+      </label> 
+
+      <label class='card-brand' style='float:left;margin-left:20px;margin-top:10px;'>
+        <input type="radio" name="card-brand" value="mastercard2" class='card-brand-input' />
+        <img src="./img/mastercard_white.png" style='width:60px;'>
+      </label> 
+    </fieldset>
+
+    <fieldset class="fieldset-type" style='display:none;'>
+      <div class="switch-field">
+        <div class="switch-title">Card type</div>
+        <input type="radio" id="card-type2" name="card-type" value="physical" checked />
+        <label for="card-type2">Physical</label>
+        <input type="radio" id="card-type" name="card-type" value="virtual" />
+        <label for="card-type">Virtual</label>        
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <label>Amount & Currency</label>
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon currency-symbol" style='width:30px;height:30px;line-height:30px;float:left;text-align:center;'>$</div>
+        <input name='card-amount' type="text" class="form-control currency-amount" id="inlineFormInputGroup" placeholder="0.00" style='width:100px;float:left;height:30px;line-height:30px;border-bottom-right-radius: 0;border-top-right-radius: 0;'>
+        <div class="input-group-addon currency-addon" style='width:80px;float:left;height:30px;line-height:30px;background-color: #eceeef;border: 1px solid rgba(0,0,0,.15);border-radius: .25rem;border-left: 0;border-bottom-left-radius: 0;border-top-left-radius: 0;font-size: 11px;color: rgba(0, 0, 0, 0.6);margin-bottom: 5px;font-weight: bold;font-family: Inconsolata;'>  
+          <select class="currency-selector" name='card-currency'>
+            <option data-symbol="$" data-placeholder="0.00" selected>USD</option>
+            <option data-symbol="€" data-placeholder="0.00">EUR</option>
+            <option data-symbol="£" data-placeholder="0.00">GBP</option>
+            <option data-symbol="¥" data-placeholder="0">JPY</option>
+            <option data-symbol="$" data-placeholder="0.00">CAD</option>
+            <option data-symbol="$" data-placeholder="0.00">AUD</option>
+          </select>  
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class='fieldset-bg'>
+      <label> Background </label>  
+      <div class="switch-field">
+        <input type="radio" id="card-bg1" name="card-bg" value="1" class='bg-picker-input' checked />
+        <label for="card-bg1">Image</label>          
+        <input type="radio" id="card-bg2" name="card-bg" value="2" class='bg-picker-input' />
+        <label for="card-bg2">Gradient</label>
+        <input type="radio" id="card-bg3" name="card-bg" value="3" class='bg-picker-input randomColorBtn' />
+        <label for="card-bg3">Random</label>
+        <input type="radio" id="card-bg4" name="card-bg" value="4" class='bg-picker-input' />
+        <label for="card-bg4">Plain Color</label>
+      </div>
+      <div class='bg-picker card-bg1'>
+        <div style='width:100%;text-align:center;padding:20px;' class="uploader">
+          <label style='clear:both;text-align:left;padding-top:20px;'> Background image: <input style='width:10px;height:10px;' type='checkbox' class='bg-image' checked></label>
+          <div class='bg-image-div'>
+            <label style='clear:both;padding-top:30px;'> Upload an image (drag&drop or click)</label>
+            <input type='file' id='filePhoto' accept="image/*" onchange="loadFile(event)">
+            <img id='img-preview' src='http://cdn.flaticon.com/svg/44/44386.svg' width='200' height='140' style='overflow:hidden;' />
+          </div>
+        </div>
+      </div>
+      <div class='bg-picker card-bg2' style='display:none;'>
+          <div class="gradientPicker" style='clear:both;text-align:center;padding-top:20px;'>
+		        	<label>Choose Colors:</label>
+		        	<input class="inputColorOne" type="color" name="color1" value="#be6edb" style='width:50px;padding:0px;height:50px;clear:both;'>
+		        	<input class="inputColorTwo" type="color" name="color2" value="#09818a" style='width:50px;padding:0px;height:50px;clear:both;'>
+		      </div>
+      </div>
+      <div class='bg-picker card-bg3' style='display:none;'></div>
+      <div class='bg-picker card-bg4' style='display:none;'>
+          <div class="colorPicker">
+              <input class="plain-color white" type="radio" name="hat-color" value="white" id="hat-color-white"/>
+              <label class="white" for="hat-color-white">white</label>
+              <input class="plain-color red" type="radio" name="hat-color" value="red" id="hat-color-red"/>
+              <label class="red" for="hat-color-red">red</label>
+              <input class="plain-color orange" type="radio" name="hat-color" value="orange" id="hat-color-orange"/>
+              <label class="orange" for="hat-color-orange">orange</label>
+              <input class="plain-color yellow" type="radio" name="hat-color" value="yellow" id="hat-color-yellow"/>
+              <label class="yellow" for="hat-color-yellow">yellow</label>
+              <input class="plain-color green" type="radio" name="hat-color" value="green" id="hat-color-green"/>
+              <label class="green" for="hat-color-green">green</label>
+              <input class="plain-color blue" type="radio" name="hat-color" value="blue" id="hat-color-blue"/>
+              <label class="blue" for="hat-color-blue">blue</label>
+              <input class="plain-color indigo" type="radio" name="hat-color" value="indigo" id="hat-color-indigo"/>
+              <label class="indigo" for="hat-color-indigo">indigo</label>
+              <input class="plain-color violet" type="radio" name="hat-color" value="violet" id="hat-color-violet"/>
+              <label class="violet" for="hat-color-violet">violet</label>
+              <input class="plain-color black" type="radio" name="hat-color" value="black" id="hat-color-black"/>
+              <label class="black" for="hat-color-black">black</label>              
+          </div>
+      </div>
+    </fieldset>
+
+    <div class="form-row">
+      <label for="card-element" style='text-transform: uppercase;font-size: 11px;color: rgba(0, 0, 0, 0.6);margin-bottom: 5px;font-weight: bold;font-family: Inconsolata;'>
+        Payment Credit or debit card
+      </label>
+      <div id="card-element"></div>  
+      <!-- Used to display form errors. -->
+      <div id="card-errors" role="alert"></div>
+    </div>
+    
+    <button class="btn" id='submit-bttn'><i class="fa fa-lock"></i> submit (5$) </button>
+    <input type='submit' id='submit-input' style='display:none;' />
+    <div id="payment-request-button">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+  </form>
+</div>
+
+<div class='container-main'>
+  More than 7 cards created!<br /><br />
+
+  <p style='font-weight:300;'>See some card inspirations:</p>
+
+  <div class='other-cards'>
+    <div class='card-example card1' style='width:90%;'><img src='./img/card-example1.png' /></div>
+    <div class='card-example card2' style='width:90%;'><img src='./img/card-example2.png' /></div>
+    <div class='card-example card3' style='width:90%;'><img src='./img/card-example3.png' /></div>
+
+    <div class='card-example card4' style='width:33%;float:left;'></div>
+    <div class='card-example card5' style='width:33%;float:left;'></div>
+    <div class='card-example card6' style='width:33%;float:left;'></div>
+  </div>
+</div>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="js/index.js"></script>
+<script src="js/random-gradient.js"></script>
+
+</body>
+</html>

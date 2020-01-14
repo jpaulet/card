@@ -1,0 +1,570 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: 'Open sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(50deg, #f3c680, #a1e3e2);
+}
+
+/*--------------------
+Buttons
+--------------------*/
+.btn {
+  display: block;
+  background: #bded7d;
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+  padding: 15px 15px;
+  border-radius: 5px;
+  position: relative;
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .2s ease-in-out;
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0), 0 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.btn:hover::after {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*--------------------
+Form
+--------------------*/
+.form fieldset {
+  border: none;
+  padding: 0;
+  padding: 10px 0;
+  position: relative;
+  clear: both;
+}
+.form fieldset.fieldset-expiration {
+  float: left;
+  width: 60%;
+}
+.form fieldset.fieldset-expiration .select {
+  width: 84px;
+  margin-right: 12px;
+  float: left;
+}
+.form fieldset.fieldset-ccv {
+  clear: none;
+  float: right;
+  width: 86px;
+}
+.form fieldset label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: Inconsolata;
+}
+.form fieldset input,
+.form fieldset .select {
+  width: 100%;
+  height: 38px;
+  color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.form fieldset input.input-cart-number,
+.form fieldset .select.input-cart-number {
+  width: 82px;
+  display: inline-block;
+  margin-right: 8px;
+}
+.form fieldset input.input-cart-number:last-child,
+.form fieldset .select.input-cart-number:last-child {
+  margin-right: 0;
+}
+.form fieldset .select {
+  position: relative;
+}
+.form fieldset .select::after {
+  content: '';
+  border-top: 8px solid #222;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 10px;
+  pointer-events: none;
+}
+.form fieldset .select select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  padding: 0;
+  border: none;
+  width: 100%;
+  outline: none !important;
+  top: 6px;
+  left: 6px;
+  background: none;
+}
+.form fieldset .select select :-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+.form button {
+  width: 100%;
+  outline: none !important;
+  background: linear-gradient(180deg, #49a09b, #3d8291);
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  box-shadow: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+}
+.form button .fa {
+  margin-right: 6px;
+}
+
+/*--------------------
+Checkout
+--------------------*/
+
+.container-main {
+  margin:0px auto 0px;
+  display:block;
+  position: relative;  
+  font-weight: bold; 
+  font-family: Inconsolata; 
+  width: 460px;
+  padding: 30px 45px 30px;
+  text-align:center;
+}
+
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+ .StripeElement {
+  background-color: white;
+  height: 40px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.checkout {
+  margin: 150px auto 30px;
+  position: relative;
+  width: 460px;
+  background: white;
+  border-radius: 15px;
+  padding: 160px 45px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------
+Credit Card
+--------------------*/
+.credit-card-box {
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  width: 400px;
+  height: 280px;
+  position: absolute;
+  top: -112px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.credit-card-box:hover .flip, .credit-card-box.hover .flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.credit-card-box .front,
+.credit-card-box .back {
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: linear-gradient(135deg, #bd6772, #53223f);
+  position: absolute;
+  color: #fff;
+  font-family: Inconsolata;
+  top: 0;
+  left: 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+.credit-card-box .front::before,
+.credit-card-box .back::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("http://cdn.flaticon.com/svg/44/44386.svg") no-repeat center;
+  background-size: cover;
+  opacity: .05;
+}
+.credit-card-box .flip {
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+.credit-card-box .logo {
+  position: absolute;
+  bottom: 9px;
+  right: 20px;
+  width: 60px;
+}
+.credit-card-box .logo svg {
+  width: 100%;
+  height: auto;
+  fill: #fff;
+}
+.credit-card-box .front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+.credit-card-box .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.credit-card-box .back .logo {
+  top: 185px;
+}
+.credit-card-box .chip {
+  position: absolute;
+  width: 50px;
+  height: 35px;
+  top: 80px;
+  left: 20px;
+  background: linear-gradient(135deg, #ddccf0 0%, #d1e9f5 44%, #f8ece7 100%);
+  border-radius: 8px;
+}
+
+.credit-card-box .contactless{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 80px;
+  left: 80px;
+}
+
+.credit-card-box .chip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 4px solid rgba(128, 128, 128, 0.1);
+  width: 80%;
+  height: 70%;
+  border-radius: 5px;
+}
+.credit-card-box .strip {
+  background: linear-gradient(135deg, #404040, #1a1a1a);
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 30px;
+  left: 0;
+}
+.credit-card-box .number {
+  position: absolute;
+  margin: 0 auto;
+  top: 123px;
+  left: 19px;
+  font-size: 38px;
+}
+.credit-card-box label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-shadow: none;
+  text-transform: uppercase;
+  font-weight: normal;
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 3px;
+}
+.credit-card-box .card-holder,
+.credit-card-box .card-expiration-date {
+  position: absolute;
+  margin: 0 auto;
+  top: 180px;
+  left: 19px;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+.credit-card-box .card-expiration-date {
+  text-align: left;
+  left: auto;
+  left: 20px;
+}
+.credit-card-box .ccv {
+  height: 36px;
+  background: #fff;
+  width: 91%;
+  border-radius: 5px;
+  top: 110px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 auto;
+  color: #000;
+  text-align: right;
+  padding: 10px;
+}
+.credit-card-box .ccv label {
+  margin: -25px 0 14px;
+  color: #fff;
+}
+
+
+/* Switch area */
+
+.switch-title{
+  display: block;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: Inconsolata;
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-field label {
+  float: left;
+}
+
+.switch-field label {
+  display: inline-block;
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: #A5DC86;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
+
+/* Card brands */
+
+.card-brand > input{ 
+  visibility: hidden;
+  position: absolute;
+}
+.card-brand > input + img{
+  cursor:pointer;
+  opacity:0.25;
+}
+.card-brand > input:checked + img{ 
+  opacity: 1;
+}
+
+/* Color picker */
+.colorPicker {
+  margin-top: 1em;
+  font-size: 0.875em;
+  text-align: center;
+  display: inline-table;
+  width: 100%;
+  max-width: 40em;
+  padding: 2px;
+}
+.colorPicker label {
+  -webkit-tap-highlight-color: rgba(255,255,255,0.5);
+  transition: all 0.2s ease-in-out;
+  display: table-cell !important;
+  cursor: pointer;
+  vertical-align: middle;
+  padding: 0.5em 1em;
+  text-transform: capitalize;
+  letter-spacing: -0.5em;
+  color: transparent;
+  opacity: 0.35;
+  width: 1%;
+  background-image: linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.1));
+}
+.colorPicker label.red {
+  background-color: #ff3e05;
+  -webkit-tap-highlight-color: #ff3e05;
+}
+.colorPicker label.orange {
+  background-color: #ff8d05;
+  -webkit-tap-highlight-color: #ff8d05;
+}
+.colorPicker label.yellow {
+  background-color: #ecca05;
+  -webkit-tap-highlight-color: #ecca05;
+}
+.colorPicker label.green {
+  background-color: #40af04;
+  -webkit-tap-highlight-color: #40af04;
+}
+.colorPicker label.blue {
+  background-color: #057fff;
+  -webkit-tap-highlight-color: #057fff;
+}
+.colorPicker label.indigo {
+  background-color: #7500ca;
+  -webkit-tap-highlight-color: #7500ca;
+}
+.colorPicker label.violet {
+  background-color: #cc6fcc;
+  -webkit-tap-highlight-color: #cc6fcc;
+}
+.colorPicker label.white {
+  background-color: #fff;
+  -webkit-tap-highlight-color: #fff;
+}
+.colorPicker label.black {
+  background-color: #000;
+  -webkit-tap-highlight-color: #000;
+}
+.colorPicker label:first-of-type {
+  border-radius: 0.25em 0 0 0.25em;
+}
+.colorPicker label:last-of-type {
+  border-radius: 0 0.25em 0.25em 0;
+}
+.colorPicker label:hover {
+  opacity: 1;
+  color: #fff;
+  letter-spacing: normal;
+}
+.colorPicker input {
+  display: none;
+}
+.colorPicker input:checked + label {
+  width: 90%;
+  opacity: 1;
+  color: #fff;
+  letter-spacing: normal;
+}
+
+
+input[type="color"] {
+	background: transparent;
+	color: transparent;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: transform 1s, box-shadow 1s;
+}
+
+input[type="color"]:hover {
+	transform: scale(1.1, 1.1);
+	box-shadow: -5px 1px 30px rgba(0,0,0, 0.3);
+}
+
+/* File upload */
+#filePhoto{
+  position:absolute;
+  width:100%;
+  height:140px;
+  left:0;
+  z-index:2;
+  opacity:0;
+  cursor:pointer;
+}
+
+/* Currency */
+
+.currency-selector {
+  width: 100%;
+  height: 100%;
+  padding-left: .5rem;
+  border: 0;
+  background: transparent;
+}
+
+.currency-amount {
+  text-align: right;
+}
+
+.currency-addon {
+  width: 6em;
+  text-align: left;
+  position: relative;
+}
